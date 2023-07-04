@@ -6,7 +6,7 @@ Basic pairwise sequence alingment can be computed using the Needleman-Wunsch Alg
 
 There are several ways to do multiple sequence alignment, but this project uses the most rudimentary version. 
 
-##Instructions for Use
+## Instructions for Use
 coming soon!
 
-##How it Works
+## How it Works
