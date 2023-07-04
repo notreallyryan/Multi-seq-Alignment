@@ -16,4 +16,5 @@ In this implementation, the NW algorithm has been modified to accept sequence pr
 
 This allows the NW algorithm to account for multiple sequences at a time by using the following calculation:
 
-$$Score = \sum_{i=1}^n \sum_{j=1}^n P(i) * P(j) * S(i,j)$$
+$$Score_{x} = \sum_{i=1}^n \sum_{j=1}^n P_x(i) * P_x(j) * S(i,j)$$
+
