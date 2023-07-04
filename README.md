@@ -16,5 +16,6 @@ In this implementation, the NW algorithm has been modified to accept sequence pr
 
 This allows the NW algorithm to account for multiple sequences at a time by using the following calculation:
 
-$$Score_{x} = \sum_{i=1}^n \sum_{j=1}^n P_x(i) * P_x(j) * S(i,j)$$
+$$Score_{x} = \sum_{i=1}^n \sum_{j=1}^m P_x(i) * P_x(j) * S(i,j)$$
 
+where $x$ is the index, $n$ and $m$ are the possible observable states in profile 1 and 2, $P_x(i)$ and $P_x(j)$ are the probabilities of observing $i$ or $j$ at position x in profile 1 and 2, and $S(i,j)$ is the scoring function for a match between $i$ and $j$
