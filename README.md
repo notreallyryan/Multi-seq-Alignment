@@ -10,3 +10,10 @@ There are several ways to do multiple sequence alignment, but this project uses 
 coming soon!
 
 ## How it Works
+In this implementation, the NW algorithm has been modified to accept sequence profiles instead of sequences. A sequence profile is just a probability table of the possible observations at each index:
+
+[insert image here]
+
+This allows the NW algorithm to account for multiple sequences at a time by using the following calculation:
+
+$$Score = \sum_{i=1}^n \sum_{j=1}^n P(i) * P(j) * S(i,j)$$
