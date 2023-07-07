@@ -38,4 +38,4 @@ The new node object is inserted into the graph, and the edges connecting it to a
 
 [Insert Image here]
 
-In the final iteration, only one node will remain, containg the properly aligned sequences. 
+In the final iteration, only one node will remain, containing the properly aligned sequences. 
