@@ -3,6 +3,8 @@ Testing node file
 """
 import pandas as pd
 import numpy as np
+import sys
+sys.path.insert(0,".")
 
 from Aligner import Aligner
 import unittest
