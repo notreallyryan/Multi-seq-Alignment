@@ -31,17 +31,17 @@ class Verifier:
     Note: the sequence validator is the only one that does it one at a time
     """
     def seq_validator(seq):
-        if re.search("[^ACGT]", seq): return False
+        if re.search("[^ACGT]", seq): return False #if includes non ACGT chars
         return True;
 
     def scorings_validator(scorings):
         for x in range(0,3):
             for y in range(0,3):
-                if x == y and scorings[x,y] < 1: return False
-                if x != y and scorings[x,y] >= 0: return False
+                if x == y and scorings[x,y] < 1: return False #scoring for direct match cannot be lower than 1.
+                if x != y and scorings[x,y] >= 0: return False #scoring for a mismatch must be a negative number
         return True
     
     def penalties_validator(penalties):
-        if penalties[0] < penalties[1]: return False
+        if penalties[0] < penalties[1]: return False #Initial gap peanlty must be more than continued gap penalty
         return True
 
