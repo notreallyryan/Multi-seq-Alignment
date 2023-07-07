@@ -30,12 +30,10 @@ This implementation uses a graph like structure to align multiple sequences.
 At the start, each node object in the graph contains a profile made of one sequence (i.e. one state has a 100% chance of being observed at each index).
 The nodes are connected by edge objects, each of which contain the results of a NW algorithm using the profiles from the two nodes that it connects. Most importantly, they contain a final score for the alignment, as well as data detailing how each profile must be modified when aligned. 
 
-[Insert Image here]
+![image](https://github.com/notreallyryan/Multi-seq-Alignment/assets/96549151/5b0557b4-00b8-4aa6-b6e9-2fb98608ba64)
 
 At every iteration, the edge with the highest score is found. The two node objects that the edge connects are deleted along with any connections made with other nodes. A new node is then created using the modifiation data from the edge, and the profiles from the two nodes. 
 
 The new node object is inserted into the graph, and the edges connecting it to all other nodes are recalculated.
-
-[Insert Image here]
 
 In the final iteration, only one node will remain, containing the properly aligned sequences. 
