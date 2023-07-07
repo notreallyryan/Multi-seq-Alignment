@@ -11,6 +11,8 @@ class node:
         self.size = len(data)
         self.calculate_profile()
 
+
+
     """
     Calculates the profile for the Node
     """
@@ -24,6 +26,8 @@ class node:
             for sequence in self.data:
                 self.profile.at[sequence[position], position] += 1/self.size
 
+
+
     """
     returns the profile of the Node 
     """
@@ -31,11 +35,14 @@ class node:
         return self.profile
     
 
+
     """
     returns the sequences of the Node
     """
     def get_sequences(self):
         return self.data
+    
+
     
     """
     returns an updated list of the sequences in this node with blanks inserted after the indexes recorded in the blanks list.

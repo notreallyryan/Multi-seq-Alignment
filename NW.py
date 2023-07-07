@@ -20,6 +20,8 @@ class NW:
         self.fillgraph()
         self.traceback()
     
+
+
     """
     Fills out the NW graphs. Accounts for the additional gap peanlty by using two additional graphs. 
     """
@@ -50,6 +52,8 @@ class NW:
                 self.top[i][j] = max(self.top[i-1][j]-self.gapadd, self.mid[i-1][j] - self.gapstart)
                 self.mid[i][j] = max(self.low[i][j], self.top[i][j], self.mid[i-1][j-1] + self.position_score(i,j))
 
+
+
     """
     Helper function for fillgraph() that calculates the alignment score for two given indexes on the NW graph 
     """
@@ -67,6 +71,8 @@ class NW:
                 score += (temp1[x] * temp2[y] * self.scoring[x][y])
         return score
     
+
+
     """
     Function for tracing backwards through the NW graph. Stores the locations of indexes to put blanks after. 
     For computation sake, the modificatons to the sequences is not done until it has to be. 
@@ -117,11 +123,15 @@ class NW:
             self.score -= ((j-1)* self.gapadd + self.gapstart)
             for x in range(0, j): self.blanks1.append(-1)
     
+
+
     """
     Getter function that returns the maximal score of the alignment (calculated in traceback())
     """
     def get_score(self):
         return self.score
+    
+
     
     """
     returns both of the blank lists in a list. The first value in the list pertains to the first node, and the second value to the second node

@@ -11,6 +11,8 @@ class Aligner:
     Constructor: Creates a graph represented by a list of nodes and ajacency matrix of edges
     Inputs: list of sequences to align, scoring matrix (dataframe), penalty list
     """
+
+    
     def __init__(self, sequences, scorings, penalties):
         #makes a list of all the nodes made from the sequences.
         self.nodes = []
@@ -26,6 +28,8 @@ class Aligner:
 
         self.penalties = penalties
 
+
+
     """
     makes the ajacency matrix from the list of given nodes. 
     Each edges contains a NW object or NW child.
@@ -37,6 +41,8 @@ class Aligner:
                 temp.append(NW(self.nodes[i], self.nodes[j],self.scorings, self.penalties))
             self.matrix.append(temp)
     
+
+
     """
     removes a node from the graph and from the list
     inputs: index of node in list
@@ -46,6 +52,8 @@ class Aligner:
             del self.matrix[i][index]
         del self.matrix[index]
         del self.nodes[index]
+
+
 
     """
     modifies a node in the graph and recalculates all it's edges
@@ -61,6 +69,8 @@ class Aligner:
             pass
 
         self.nodes[index]= newnode
+
+
 
     """
     Aligns the sequences currently in the object.

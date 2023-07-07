@@ -24,6 +24,8 @@ class Verifier:
         self.penalties = penalties
         return True
 
+
+
     """
     Validators: Ensures that the input provided is valid
     Note: the sequence validator is the only one that does it one at a time
