@@ -7,7 +7,9 @@ Basic pairwise sequence alingment can be computed using the Needleman-Wunsch Alg
 There are several ways to do multiple sequence alignment, but this project uses the most rudimentary version. 
 
 ## Instructions for Use
-coming soon!
+1. Put the .fasta files containing the nucleotide sequences to align in _INPUTS/sequences. Multiple sequences can be put into one file if need be.
+2. Put a .csv file contining the scoring matrix into _INPUTS/scoring. ONly the first csv file will be read. (The assumed order of the row/column names is ACGT) 
+4. Run main.py, and input the starting gap penalty and the continuing gap penalty when prompted. 
 
 ## How it Works
 
