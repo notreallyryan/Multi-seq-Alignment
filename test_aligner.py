@@ -20,6 +20,8 @@ gap_penalty3 = [3,1]
 
 class MyTest(unittest.TestCase):
 
+
+
     """
     Testing the aligner object object with just two sequences.
     """
@@ -31,6 +33,8 @@ class MyTest(unittest.TestCase):
         testobject = Aligner(["TTG", "TAGGG"], score_df2, gap_penalty)
         self.assertEqual(sorted(testobject.Align_sequences()), sorted(["TT--G", "TAGGG"]))
     
+
+
     """
     Testing the aligner object object with more sequences.
     """
@@ -49,6 +53,8 @@ class MyTest(unittest.TestCase):
     def test_four_spaced(self):
         testobject = Aligner(["CATGCGAGTAGTAG", "CATGGTAGTAG", "CCTGGAGTACGTAG", "CATGAGCGTAG"], score_df2, gap_penalty3)
         print(testobject.Align_sequences())
+
+       
         
 if __name__ == '__main__':
     unittest.main()
