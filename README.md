@@ -16,7 +16,7 @@ There are several ways to do multiple sequence alignment, but this project uses 
 ### Modifications to the Needleman-Wunsch
 In this implementation, the NW algorithm has been modified to accept sequence profiles instead of sequences. A sequence profile is just a probability table of the possible observations at each index:
 
-[insert image here]
+![image](https://github.com/notreallyryan/Multi-seq-Alignment/assets/96549151/aa349cce-ba2f-41e8-bc88-f317ac0570b3)
 
 This allows the NW algorithm to account for multiple sequences at a time by using the following calculation:
 
