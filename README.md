@@ -6,6 +6,13 @@ Basic pairwise sequence alingment can be computed using the Needleman-Wunsch Alg
 
 There are several ways to do multiple sequence alignment, but this project uses the most rudimentary version. 
 
+## WARNING!
+After taking a break from this code to focus on school, I came back to it to do some testing, and found a new bug. For some reason, certain sequences cause the Needleman Wunsch algorithm to leave out a couple blanks when updating the sequence profiles, resulting in an out of bounds index error later down the line.
+
+I'll be honest: I have no idea why this is yet. I suspect it's something to do with the Needleman Wunsch graph generation or traversal, but haven't been able to replicate the issue reliably in testing. If you manage to figure it out, please let me know! I'd love to know where I went wrong so that I can avoid it in the future.
+
+Either way, keep in mind that while the example sequences provided will work fine 
+
 ## Instructions for Use
 1. Put the .fasta files containing the nucleotide sequences to align in _INPUTS/sequences. Multiple sequences can be put into one file if need be.
 2. Put a .csv file contining the scoring matrix into _INPUTS/scoring. Only the first csv file will be read. (The assumed order of the row/column names is ACGT) 
