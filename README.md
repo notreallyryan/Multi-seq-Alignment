@@ -11,7 +11,7 @@ After taking a break from this code to focus on school, I came back to it to do 
 
 I'll be honest: I have no idea why this is yet. I suspect it's something to do with the Needleman Wunsch graph generation or traversal, but haven't been able to replicate the issue reliably in testing. If you manage to figure it out, please let me know! I'd love to know where I went wrong so that I can avoid it in the future.
 
-Either way, keep in mind that while the example sequences provided will work fine 
+Either way, keep in mind that while the example sequences provided will work fine, there is no guarantee that additional user given sequences will. Hopefully this will be rememdied in the future, but unfortunately for now the bug detracts from the usability of this project.
 
 ## Instructions for Use
 1. Put the .fasta files containing the nucleotide sequences to align in _INPUTS/sequences. Multiple sequences can be put into one file if need be.
